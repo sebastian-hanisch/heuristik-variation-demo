@@ -1,0 +1,18 @@
+  m1 clu3 Z-S: 20 Läufe in 215 s
+  m1 clu3 ZW-S: 20 Läufe in 227 s
+  m1 clu3 EA-S: 20 Läufe in 226 s
+  m1 clu3 Z-T: 20 Läufe in 252 s
+  m1 clu3 GP0-T: 20 Läufe in 179 s
+  m1 clu3 GP-T: 20 Läufe in 199 s
+m1:clu3: fertig in 1315 s, 120000 Auswertungen gezählt
+  m1 stark Z-S: 20 Läufe in 195 s
+  m1 stark ZW-S: 20 Läufe in 162 s
+  m1 stark EA-S: 20 Läufe in 156 s
+  m1 stark Z-T: 20 Läufe in 172 s
+  m1 stark GP0-T: 20 Läufe in 121 s
+  m1 stark GP-T: 20 Läufe in 198 s
+m1:stark: fertig in 1022 s, 120000 Auswertungen gezählt
+  m3 stark Z-S: 10 Läufe in 120 s
+  m3 stark EA-S: 10 Läufe in 100 s
+  m3 stark GP-T: 10 Läufe in 77 s
+m3:stark: fertig in 309 s, 30000 Auswertungen gezählt

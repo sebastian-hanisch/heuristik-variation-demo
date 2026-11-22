@@ -1,0 +1,9 @@
+(a) Packung: 3200 Prüfungen
+(b) Optimum: 540 Prüfungen
+greedy verfehlt das Optimum über alle k-Mengen in [0, 62, 58, 36] von je 400 Tabellen (k = 1, 2, 3, 4); größte Lücke 4 Behälter (Tabellen mit 4 bis 11 Regeln, 5 bis 10 Instanzen, Werte 3 bis 8)
+(c) Mengen: 2060 Prüfungen
+(d) Merkmalswahl: 295 Prüfungen
+Anteile der Operatorarten über 100000 Züge: {'parameter': 0.5006, 'vorlage': 0.1988, 'zweiter_term': 0.3006}
+(e) Operator: 4 Prüfungen
+(f) Zählung: 36 Prüfungen
+GESAMT: 6135 Prüfungen, 0 Fehler

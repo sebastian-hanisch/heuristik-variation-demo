@@ -1,0 +1,1 @@
+{"gl_20_70": {"bf_ueber_opt": 6.172619, "lb_unter_opt": 5.64881, "bf_optimal": 139, "lb_eq_opt": 135, "n": 200, "n_items": 10}, "clu3": {"bf_ueber_opt": 3.791667, "lb_unter_opt": 7.876786, "bf_optimal": 169, "lb_eq_opt": 126, "n": 200, "n_items": 10}, "stark": {"bf_ueber_opt": 6.175, "lb_unter_opt": 4.075, "bf_optimal": 147, "lb_eq_opt": 155, "n": 200, "n_items": 10}}

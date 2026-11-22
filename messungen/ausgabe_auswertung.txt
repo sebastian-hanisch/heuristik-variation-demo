@@ -1,0 +1,333 @@
+== T1 Arme gegen Best Fit (Median Training / Test same60, 20 Läufe) ==
+Budget 200: Urteile {'besser': 0, 'gleich': 16, 'schlechter': 2}
+  Z-S    gl_20_70 Tr -0.21 (18<0) Te +0.12 (1<0, 18>0) gleich | clu3 Tr -0.22 (15<0) Te -0.00 (10<0, 8>0) gleich | stark Tr -0.19 (15<0) Te +0.20 (1<0, 16>0) schlechter
+  ZW-S   gl_20_70 Tr -0.09 (12<0) Te +0.04 (1<0, 13>0) gleich | clu3 Tr -0.22 (14<0) Te +0.04 (9<0, 11>0) gleich | stark Tr -0.10 (11<0) Te +0.09 (0<0, 17>0) gleich
+  EA-S   gl_20_70 Tr -0.38 (14<0) Te +0.06 (2<0, 14>0) gleich | clu3 Tr -0.22 (14<0) Te -0.00 (10<0, 9>0) gleich | stark Tr -0.42 (18<0) Te +0.22 (0<0, 20>0) schlechter
+  Z-T    gl_20_70 Tr -0.02 (11<0) Te +0.02 (1<0, 12>0) gleich | clu3 Tr -0.11 (11<0) Te -0.00 (11<0, 6>0) gleich | stark Tr +0.00 (8<0) Te +0.02 (0<0, 11>0) gleich
+  GP0-T  gl_20_70 Tr +0.00 (5<0) Te +0.00 (1<0, 8>0) gleich | clu3 Tr -0.21 (12<0) Te +0.00 (9<0, 7>0) gleich | stark Tr +0.00 (7<0) Te +0.01 (0<0, 10>0) gleich
+  GP-T   gl_20_70 Tr -0.10 (12<0) Te +0.02 (2<0, 10>0) gleich | clu3 Tr +0.00 (8<0) Te -0.00 (12<0, 4>0) gleich | stark Tr -0.19 (12<0) Te +0.17 (0<0, 12>0) gleich
+Budget 1000: Urteile {'besser': 0, 'gleich': 17, 'schlechter': 1}
+  Z-S    gl_20_70 Tr -0.46 (19<0) Te +0.13 (4<0, 15>0) gleich | clu3 Tr -0.23 (16<0) Te +0.03 (7<0, 11>0) gleich | stark Tr -0.23 (20<0) Te +0.18 (0<0, 20>0) gleich
+  ZW-S   gl_20_70 Tr -0.37 (19<0) Te +0.11 (4<0, 16>0) gleich | clu3 Tr -0.24 (17<0) Te -0.01 (11<0, 9>0) gleich | stark Tr -0.38 (18<0) Te +0.16 (0<0, 19>0) gleich
+  EA-S   gl_20_70 Tr -0.72 (19<0) Te +0.06 (3<0, 15>0) gleich | clu3 Tr -0.24 (16<0) Te +0.03 (7<0, 12>0) gleich | stark Tr -0.57 (20<0) Te +0.24 (1<0, 19>0) schlechter
+  Z-T    gl_20_70 Tr -0.20 (16<0) Te +0.12 (3<0, 14>0) gleich | clu3 Tr -0.24 (17<0) Te +0.07 (7<0, 12>0) gleich | stark Tr -0.19 (15<0) Te +0.13 (1<0, 16>0) gleich
+  GP0-T  gl_20_70 Tr -0.19 (13<0) Te +0.01 (3<0, 12>0) gleich | clu3 Tr -0.22 (14<0) Te +0.01 (7<0, 10>0) gleich | stark Tr -0.20 (13<0) Te +0.10 (0<0, 15>0) gleich
+  GP-T   gl_20_70 Tr -0.35 (18<0) Te +0.12 (4<0, 14>0) gleich | clu3 Tr -0.23 (12<0) Te +0.00 (9<0, 8>0) gleich | stark Tr -0.24 (14<0) Te +0.09 (1<0, 13>0) gleich
+Spanne der Mediane bei 1000: Training -0.72 bis -0.19, Test -0.01 bis +0.24
+360 Läufe: Training <0 296, =0 64, >0 0; Test <0 72, =0 38, >0 250; Test <= -0,2: 1, >= +0,2: 111
+
+== T2 Vergleiche B minus A, gepaart je Lauf (negativ = B besser) ==
+  200 gl_20_70 Z-S   ->ZW-S   Variation allein             Training +0.10 (3<0, 14>0) gleich     | Test -0.07 (13<0, 7>0) gleich
+  200 gl_20_70 ZW-S  ->EA-S   Auswahl der Besten           Training -0.27 (12<0, 4>0) gleich     | Test +0.00 (9<0, 9>0) gleich
+  200 gl_20_70 Z-S   ->EA-S   beides                       Training -0.11 (12<0, 7>0) gleich     | Test -0.09 (13<0, 6>0) gleich
+  200 gl_20_70 Z-T   ->GP0-T  Variation allein             Training +0.00 (3<0, 10>0) gleich     | Test -0.00 (10<0, 4>0) gleich
+  200 gl_20_70 GP0-T ->GP-T   Auswahl der Besten           Training -0.00 (10<0, 4>0) gleich     | Test +0.00 (7<0, 9>0) gleich
+  200 gl_20_70 Z-T   ->GP-T   beides                       Training +0.00 (8<0, 6>0) gleich     | Test +0.00 (7<0, 9>0) gleich
+  200 gl_20_70 EA-S  ->GP-T   Operator gegen Baumkreuzung  Training +0.26 (5<0, 11>0) gleich     | Test +0.00 (9<0, 8>0) gleich
+  200 clu3     Z-S   ->ZW-S   Variation allein             Training +0.00 (3<0, 6>0) gleich     | Test -0.00 (11<0, 8>0) gleich
+  200 clu3     ZW-S  ->EA-S   Auswahl der Besten           Training +0.00 (3<0, 1>0) gleich     | Test -0.00 (10<0, 9>0) gleich
+  200 clu3     Z-S   ->EA-S   beides                       Training +0.00 (3<0, 4>0) gleich     | Test -0.01 (11<0, 6>0) gleich
+  200 clu3     Z-T   ->GP0-T  Variation allein             Training +0.00 (4<0, 5>0) gleich     | Test +0.01 (7<0, 11>0) gleich
+  200 clu3     GP0-T ->GP-T   Auswahl der Besten           Training +0.00 (1<0, 5>0) gleich     | Test +0.00 (6<0, 6>0) gleich
+  200 clu3     Z-T   ->GP-T   beides                       Training +0.00 (2<0, 6>0) gleich     | Test +0.00 (5<0, 8>0) gleich
+  200 clu3     EA-S  ->GP-T   Operator gegen Baumkreuzung  Training +0.00 (1<0, 8>0) gleich     | Test +0.00 (8<0, 8>0) gleich
+  200 stark    Z-S   ->ZW-S   Variation allein             Training +0.01 (4<0, 10>0) gleich     | Test -0.03 (10<0, 9>0) gleich
+  200 stark    ZW-S  ->EA-S   Auswahl der Besten           Training -0.23 (16<0, 1>0) besser     | Test +0.09 (6<0, 14>0) gleich
+  200 stark    Z-S   ->EA-S   beides                       Training -0.22 (17<0, 1>0) besser     | Test +0.09 (8<0, 12>0) gleich
+  200 stark    Z-T   ->GP0-T  Variation allein             Training +0.00 (3<0, 6>0) gleich     | Test +0.00 (8<0, 8>0) gleich
+  200 stark    GP0-T ->GP-T   Auswahl der Besten           Training +0.00 (8<0, 3>0) gleich     | Test +0.00 (6<0, 9>0) gleich
+  200 stark    Z-T   ->GP-T   beides                       Training +0.00 (6<0, 3>0) gleich     | Test +0.00 (6<0, 9>0) gleich
+  200 stark    EA-S  ->GP-T   Operator gegen Baumkreuzung  Training +0.24 (1<0, 16>0) schlechter | Test -0.07 (12<0, 8>0) gleich
+Budget 200, 21 Vergleiche: Training {'besser': 2, 'gleich': 18, 'schlechter': 1}, Test {'besser': 0, 'gleich': 21, 'schlechter': 0}
+Budget 400, 21 Vergleiche: Training {'besser': 1, 'gleich': 19, 'schlechter': 1}, Test {'besser': 0, 'gleich': 21, 'schlechter': 0}
+  1000 gl_20_70 Z-S   ->ZW-S   Variation allein             Training +0.10 (7<0, 11>0) gleich     | Test +0.02 (9<0, 11>0) gleich
+  1000 gl_20_70 ZW-S  ->EA-S   Auswahl der Besten           Training -0.26 (15<0, 4>0) besser     | Test -0.08 (12<0, 8>0) gleich
+  1000 gl_20_70 Z-S   ->EA-S   beides                       Training -0.18 (14<0, 3>0) gleich     | Test -0.03 (11<0, 8>0) gleich
+  1000 gl_20_70 Z-T   ->GP0-T  Variation allein             Training +0.18 (3<0, 12>0) gleich     | Test -0.05 (12<0, 6>0) gleich
+  1000 gl_20_70 GP0-T ->GP-T   Auswahl der Besten           Training -0.19 (16<0, 2>0) gleich     | Test +0.04 (7<0, 11>0) gleich
+  1000 gl_20_70 Z-T   ->GP-T   beides                       Training -0.18 (14<0, 4>0) gleich     | Test +0.00 (9<0, 9>0) gleich
+  1000 gl_20_70 EA-S  ->GP-T   Operator gegen Baumkreuzung  Training +0.36 (6<0, 13>0) gleich     | Test -0.08 (11<0, 8>0) gleich
+  1000 clu3     Z-S   ->ZW-S   Variation allein             Training +0.00 (3<0, 2>0) gleich     | Test -0.01 (12<0, 7>0) gleich
+  1000 clu3     ZW-S  ->EA-S   Auswahl der Besten           Training +0.00 (6<0, 4>0) gleich     | Test +0.03 (6<0, 13>0) gleich
+  1000 clu3     Z-S   ->EA-S   beides                       Training +0.00 (5<0, 3>0) gleich     | Test +0.00 (9<0, 10>0) gleich
+  1000 clu3     Z-T   ->GP0-T  Variation allein             Training +0.03 (0<0, 11>0) gleich     | Test -0.02 (10<0, 10>0) gleich
+  1000 clu3     GP0-T ->GP-T   Auswahl der Besten           Training +0.00 (5<0, 3>0) gleich     | Test +0.00 (8<0, 6>0) gleich
+  1000 clu3     Z-T   ->GP-T   beides                       Training +0.00 (2<0, 8>0) gleich     | Test -0.02 (10<0, 7>0) gleich
+  1000 clu3     EA-S  ->GP-T   Operator gegen Baumkreuzung  Training +0.00 (2<0, 9>0) gleich     | Test -0.00 (10<0, 8>0) gleich
+  1000 stark    Z-S   ->ZW-S   Variation allein             Training +0.00 (9<0, 7>0) gleich     | Test -0.06 (13<0, 7>0) gleich
+  1000 stark    ZW-S  ->EA-S   Auswahl der Besten           Training -0.22 (17<0, 1>0) besser     | Test -0.01 (11<0, 9>0) gleich
+  1000 stark    Z-S   ->EA-S   beides                       Training -0.20 (16<0, 1>0) besser     | Test +0.01 (9<0, 11>0) gleich
+  1000 stark    Z-T   ->GP0-T  Variation allein             Training +0.00 (5<0, 10>0) gleich     | Test +0.00 (9<0, 9>0) gleich
+  1000 stark    GP0-T ->GP-T   Auswahl der Besten           Training -0.01 (10<0, 3>0) gleich     | Test +0.01 (8<0, 10>0) gleich
+  1000 stark    Z-T   ->GP-T   beides                       Training -0.00 (10<0, 4>0) gleich     | Test +0.00 (7<0, 10>0) gleich
+  1000 stark    EA-S  ->GP-T   Operator gegen Baumkreuzung  Training +0.21 (3<0, 15>0) schlechter | Test -0.12 (14<0, 6>0) gleich
+Budget 1000, 21 Vergleiche: Training {'besser': 3, 'gleich': 17, 'schlechter': 1}, Test {'besser': 0, 'gleich': 21, 'schlechter': 0}
+Alle zehn Stufen, Test: besser/schlechter je Stufe: [(100, 0, 0), (200, 0, 0), (300, 0, 0), (400, 0, 0), (500, 0, 0), (600, 0, 0), (700, 0, 0), (800, 0, 0), (900, 0, 0), (1000, 0, 0)]
+Alle zehn Stufen, Training: besser/schlechter je Stufe: [(100, 0, 0), (200, 2, 1), (300, 1, 1), (400, 1, 1), (500, 2, 0), (600, 3, 1), (700, 2, 1), (800, 1, 0), (900, 1, 0), (1000, 3, 1)]
+Bonferroni: bei 42 Zellen (21 Vergleiche, Training und Test) braucht der einseitige Vorzeichentest 18 von 20 Läufen; p(15 von 20) = 0.0207; 42 x p = 0.87
+Größte Zählung auf einer Seite in den 42 Zellen bei 1000: 17
+
+== T4 Kandidatenstatistik (Anteile der 20 000 Auswertungen je Zelle in %, Pool im Mittel) ==
+  Z-S    gl_20_70: =BF 4.8, besser 2.4, versch. 494, Treffer 6, Pool 994 | clu3: =BF 23.0, besser 7.2, versch. 303, Treffer 7, Pool 993 | stark: =BF 5.5, besser 1.9, versch. 481, Treffer 7, Pool 993
+  ZW-S   gl_20_70: =BF 4.9, besser 2.5, versch. 565, Treffer 45, Pool 955 | clu3: =BF 26.5, besser 7.7, versch. 333, Treffer 42, Pool 958 | stark: =BF 5.9, besser 2.1, versch. 518, Treffer 43, Pool 957
+  EA-S   gl_20_70: =BF 17.6, besser 41.3, versch. 285, Treffer 151, Pool 849 | clu3: =BF 30.9, besser 40.0, versch. 138, Treffer 99, Pool 901 | stark: =BF 15.0, besser 38.0, versch. 305, Treffer 130, Pool 870
+  Z-T    gl_20_70: =BF 5.0, besser 0.7, versch. 328, Treffer 2, Pool 998, Knoten 17.0 | clu3: =BF 15.7, besser 5.6, versch. 276, Treffer 2, Pool 998, Knoten 20.6 | stark: =BF 5.0, besser 0.4, versch. 362, Treffer 2, Pool 998, Knoten 18.2
+  GP0-T  gl_20_70: =BF 3.6, besser 0.4, versch. 148, Treffer 307, Pool 693, Knoten 15.6 | clu3: =BF 18.6, besser 8.5, versch. 130, Treffer 327, Pool 673, Knoten 11.8 | stark: =BF 4.3, besser 0.5, versch. 179, Treffer 290, Pool 710, Knoten 14.7
+  GP-T   gl_20_70: =BF 27.0, besser 23.5, versch. 182, Treffer 224, Pool 776, Knoten 19.8 | clu3: =BF 42.9, besser 26.6, versch. 84, Treffer 235, Pool 765, Knoten 15.6 | stark: =BF 34.4, besser 17.6, versch. 158, Treffer 218, Pool 782, Knoten 17.2
+
+== T5 Mengen auf same60 (Median über 20 Läufe; gegen Best Fit / gegen die beste Einzelregel des Laufs) ==
+  Z-S    gl_20_70 k=3 greedy  Training -2.13 || orakel BF -1.20 (20<0, 0>0, besser) | Regel -1.29 (20<0, 0>0, besser) || merkmal BF +1.05 (0<0, 20>0, schlechter) | Regel +0.90 (0<0, 20>0, schlechter) || fest BF +0.13 (4<0, 15>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  Z-S    gl_20_70 k=3 topk    Training -0.90 || orakel BF -0.50 (19<0, 1>0, besser) | Regel -0.57 (20<0, 0>0, besser) || merkmal BF +0.17 (4<0, 15>0, gleich) | Regel +0.00 (7<0, 7>0, gleich) || fest BF +0.13 (4<0, 15>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  Z-S    gl_20_70 k=3 zufall  Training +0.99 || orakel BF +0.86 (0<0, 20>0, schlechter) | Regel +0.88 (0<0, 20>0, schlechter) || merkmal BF +1.35 (0<0, 20>0, schlechter) | Regel +1.24 (0<0, 20>0, schlechter) || fest BF +1.09 (0<0, 20>0, schlechter) | Regel +0.99 (0<0, 20>0, schlechter)
+  Z-S    gl_20_70 k=3 bfplus  Training -0.15 || orakel BF -0.12 (20<0, 0>0, gleich) | Regel -0.23 (18<0, 2>0, besser) || merkmal BF +0.05 (1<0, 17>0, gleich) | Regel -0.07 (13<0, 7>0, gleich) || fest BF +0.00 (1<0, 4>0, gleich) | Regel -0.06 (13<0, 6>0, gleich)
+  Z-S    gl_20_70 k=5 greedy  Training -2.63 || orakel BF -1.60 (20<0, 0>0, besser) | Regel -1.69 (20<0, 0>0, besser) || merkmal BF +1.26 (0<0, 20>0, schlechter) | Regel +1.08 (0<0, 20>0, schlechter) || fest BF +0.13 (4<0, 15>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  Z-S    gl_20_70 k=5 topk    Training -1.00 || orakel BF -0.73 (20<0, 0>0, besser) | Regel -0.88 (20<0, 0>0, besser) || merkmal BF +0.20 (5<0, 14>0, gleich) | Regel +0.00 (9<0, 9>0, gleich) || fest BF +0.13 (4<0, 15>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  Z-S    gl_20_70 k=5 zufall  Training +0.18 || orakel BF +0.22 (2<0, 18>0, schlechter) | Regel +0.07 (7<0, 13>0, gleich) || merkmal BF +1.08 (0<0, 20>0, schlechter) | Regel +1.01 (0<0, 20>0, schlechter) || fest BF +0.67 (0<0, 20>0, schlechter) | Regel +0.53 (1<0, 19>0, schlechter)
+  Z-S    gl_20_70 k=5 bfplus  Training -0.28 || orakel BF -0.19 (20<0, 0>0, gleich) | Regel -0.34 (20<0, 0>0, besser) || merkmal BF +0.09 (0<0, 19>0, gleich) | Regel -0.03 (13<0, 7>0, gleich) || fest BF +0.00 (1<0, 5>0, gleich) | Regel -0.06 (13<0, 6>0, gleich)
+  Z-S    clu3     k=3 greedy  Training -1.13 || orakel BF -0.54 (20<0, 0>0, besser) | Regel -0.55 (20<0, 0>0, besser) || merkmal BF +0.40 (0<0, 20>0, schlechter) | Regel +0.35 (0<0, 20>0, schlechter) || fest BF +0.03 (7<0, 11>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  Z-S    clu3     k=3 topk    Training -0.25 || orakel BF -0.13 (20<0, 0>0, gleich) | Regel -0.20 (19<0, 0>0, gleich) || merkmal BF +0.03 (7<0, 11>0, gleich) | Regel +0.00 (0<0, 1>0, gleich) || fest BF +0.03 (7<0, 11>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  Z-S    clu3     k=3 zufall  Training +0.02 || orakel BF +0.04 (7<0, 13>0, gleich) | Regel +0.01 (10<0, 10>0, gleich) || merkmal BF +0.63 (0<0, 20>0, schlechter) | Regel +0.48 (0<0, 20>0, schlechter) || fest BF +0.21 (1<0, 19>0, schlechter) | Regel +0.17 (4<0, 16>0, gleich)
+  Z-S    clu3     k=3 bfplus  Training -0.11 || orakel BF -0.10 (20<0, 0>0, gleich) | Regel -0.16 (18<0, 2>0, gleich) || merkmal BF +0.02 (0<0, 12>0, gleich) | Regel -0.03 (11<0, 8>0, gleich) || fest BF +0.00 (5<0, 2>0, gleich) | Regel -0.03 (11<0, 7>0, gleich)
+  Z-S    clu3     k=5 greedy  Training -1.23 || orakel BF -0.63 (20<0, 0>0, besser) | Regel -0.65 (20<0, 0>0, besser) || merkmal BF +0.40 (0<0, 20>0, schlechter) | Regel +0.35 (0<0, 20>0, schlechter) || fest BF +0.03 (7<0, 11>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  Z-S    clu3     k=5 topk    Training -0.25 || orakel BF -0.15 (20<0, 0>0, gleich) | Regel -0.24 (20<0, 0>0, besser) || merkmal BF +0.04 (6<0, 12>0, gleich) | Regel +0.00 (0<0, 2>0, gleich) || fest BF +0.03 (7<0, 11>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  Z-S    clu3     k=5 zufall  Training -0.11 || orakel BF -0.10 (18<0, 2>0, gleich) | Regel -0.14 (17<0, 3>0, gleich) || merkmal BF +0.57 (0<0, 20>0, schlechter) | Regel +0.44 (0<0, 20>0, schlechter) || fest BF +0.06 (5<0, 15>0, gleich) | Regel +0.02 (9<0, 10>0, gleich)
+  Z-S    clu3     k=5 bfplus  Training -0.16 || orakel BF -0.14 (20<0, 0>0, gleich) | Regel -0.20 (19<0, 1>0, gleich) || merkmal BF +0.02 (0<0, 15>0, gleich) | Regel -0.03 (11<0, 8>0, gleich) || fest BF +0.00 (6<0, 2>0, gleich) | Regel -0.03 (12<0, 6>0, gleich)
+  Z-S    stark    k=3 greedy  Training -1.60 || orakel BF -0.43 (17<0, 3>0, besser) | Regel -0.73 (20<0, 0>0, besser) || merkmal BF +1.20 (0<0, 20>0, schlechter) | Regel +0.77 (0<0, 20>0, schlechter) || fest BF +0.18 (0<0, 20>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  Z-S    stark    k=3 topk    Training -0.59 || orakel BF -0.19 (18<0, 2>0, gleich) | Regel -0.49 (20<0, 0>0, besser) || merkmal BF +0.20 (0<0, 20>0, gleich) | Regel +0.00 (9<0, 3>0, gleich) || fest BF +0.18 (0<0, 20>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  Z-S    stark    k=3 zufall  Training +0.85 || orakel BF +1.04 (0<0, 20>0, schlechter) | Regel +0.67 (3<0, 17>0, schlechter) || merkmal BF +1.83 (0<0, 20>0, schlechter) | Regel +1.60 (0<0, 20>0, schlechter) || fest BF +1.28 (0<0, 20>0, schlechter) | Regel +0.92 (1<0, 19>0, schlechter)
+  Z-S    stark    k=3 bfplus  Training -0.05 || orakel BF -0.08 (20<0, 0>0, gleich) | Regel -0.27 (20<0, 0>0, besser) || merkmal BF +0.01 (1<0, 12>0, gleich) | Regel -0.14 (17<0, 3>0, gleich) || fest BF +0.00 (0<0, 4>0, gleich) | Regel -0.18 (20<0, 0>0, gleich)
+  Z-S    stark    k=5 greedy  Training -1.99 || orakel BF -0.70 (20<0, 0>0, besser) | Regel -0.98 (20<0, 0>0, besser) || merkmal BF +1.44 (0<0, 20>0, schlechter) | Regel +1.07 (0<0, 20>0, schlechter) || fest BF +0.18 (0<0, 20>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  Z-S    stark    k=5 topk    Training -0.65 || orakel BF -0.36 (20<0, 0>0, besser) | Regel -0.61 (20<0, 0>0, besser) || merkmal BF +0.18 (0<0, 20>0, gleich) | Regel -0.00 (10<0, 5>0, gleich) || fest BF +0.18 (0<0, 20>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  Z-S    stark    k=5 zufall  Training +0.22 || orakel BF +0.33 (0<0, 20>0, schlechter) | Regel +0.08 (7<0, 13>0, gleich) || merkmal BF +1.33 (0<0, 20>0, schlechter) | Regel +1.14 (1<0, 19>0, schlechter) || fest BF +0.65 (0<0, 20>0, schlechter) | Regel +0.32 (4<0, 16>0, schlechter)
+  Z-S    stark    k=5 bfplus  Training -0.13 || orakel BF -0.13 (20<0, 0>0, gleich) | Regel -0.32 (20<0, 0>0, besser) || merkmal BF +0.05 (1<0, 14>0, gleich) | Regel -0.10 (17<0, 3>0, gleich) || fest BF +0.00 (0<0, 5>0, gleich) | Regel -0.18 (20<0, 0>0, gleich)
+  ZW-S   gl_20_70 k=3 greedy  Training -1.87 || orakel BF -1.08 (20<0, 0>0, besser) | Regel -1.28 (20<0, 0>0, besser) || merkmal BF +0.64 (1<0, 19>0, schlechter) | Regel +0.50 (5<0, 15>0, schlechter) || fest BF +0.11 (4<0, 16>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  ZW-S   gl_20_70 k=3 topk    Training -0.86 || orakel BF -0.38 (17<0, 2>0, besser) | Regel -0.50 (20<0, 0>0, besser) || merkmal BF +0.10 (2<0, 18>0, gleich) | Regel -0.00 (10<0, 6>0, gleich) || fest BF +0.11 (4<0, 16>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  ZW-S   gl_20_70 k=3 zufall  Training +0.93 || orakel BF +1.02 (0<0, 20>0, schlechter) | Regel +0.99 (3<0, 17>0, schlechter) || merkmal BF +1.78 (0<0, 20>0, schlechter) | Regel +1.61 (0<0, 20>0, schlechter) || fest BF +1.20 (0<0, 20>0, schlechter) | Regel +1.18 (1<0, 19>0, schlechter)
+  ZW-S   gl_20_70 k=3 bfplus  Training -0.09 || orakel BF -0.08 (19<0, 0>0, gleich) | Regel -0.16 (20<0, 0>0, gleich) || merkmal BF +0.03 (0<0, 14>0, gleich) | Regel -0.08 (13<0, 7>0, gleich) || fest BF +0.00 (0<0, 2>0, gleich) | Regel -0.05 (15<0, 5>0, gleich)
+  ZW-S   gl_20_70 k=5 greedy  Training -2.26 || orakel BF -1.46 (20<0, 0>0, besser) | Regel -1.60 (20<0, 0>0, besser) || merkmal BF +0.80 (0<0, 20>0, schlechter) | Regel +0.57 (3<0, 17>0, schlechter) || fest BF +0.11 (4<0, 16>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  ZW-S   gl_20_70 k=5 topk    Training -1.02 || orakel BF -0.65 (19<0, 1>0, besser) | Regel -0.82 (20<0, 0>0, besser) || merkmal BF +0.14 (2<0, 18>0, gleich) | Regel -0.00 (10<0, 7>0, gleich) || fest BF +0.11 (4<0, 16>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  ZW-S   gl_20_70 k=5 zufall  Training +0.27 || orakel BF +0.27 (3<0, 17>0, schlechter) | Regel -0.01 (11<0, 9>0, gleich) || merkmal BF +1.16 (0<0, 20>0, schlechter) | Regel +0.85 (0<0, 20>0, schlechter) || fest BF +0.66 (0<0, 20>0, schlechter) | Regel +0.43 (2<0, 18>0, schlechter)
+  ZW-S   gl_20_70 k=5 bfplus  Training -0.26 || orakel BF -0.20 (20<0, 0>0, besser) | Regel -0.29 (20<0, 0>0, besser) || merkmal BF +0.06 (1<0, 18>0, gleich) | Regel -0.07 (12<0, 8>0, gleich) || fest BF +0.00 (0<0, 4>0, gleich) | Regel -0.05 (15<0, 5>0, gleich)
+  ZW-S   clu3     k=3 greedy  Training -1.12 || orakel BF -0.47 (20<0, 0>0, besser) | Regel -0.62 (20<0, 0>0, besser) || merkmal BF +0.26 (3<0, 17>0, schlechter) | Regel +0.23 (2<0, 16>0, schlechter) || fest BF -0.01 (11<0, 9>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  ZW-S   clu3     k=3 topk    Training -0.45 || orakel BF -0.13 (19<0, 1>0, gleich) | Regel -0.15 (18<0, 0>0, gleich) || merkmal BF +0.01 (10<0, 10>0, gleich) | Regel +0.00 (3<0, 3>0, gleich) || fest BF -0.01 (11<0, 9>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  ZW-S   clu3     k=3 zufall  Training +0.15 || orakel BF +0.31 (5<0, 15>0, schlechter) | Regel +0.13 (5<0, 15>0, gleich) || merkmal BF +0.84 (0<0, 20>0, schlechter) | Regel +0.70 (0<0, 20>0, schlechter) || fest BF +0.44 (1<0, 19>0, schlechter) | Regel +0.27 (1<0, 19>0, schlechter)
+  ZW-S   clu3     k=3 bfplus  Training -0.02 || orakel BF -0.05 (20<0, 0>0, gleich) | Regel -0.04 (19<0, 1>0, gleich) || merkmal BF +0.00 (0<0, 6>0, gleich) | Regel +0.01 (8<0, 12>0, gleich) || fest BF +0.00 (3<0, 1>0, gleich) | Regel +0.01 (9<0, 11>0, gleich)
+  ZW-S   clu3     k=5 greedy  Training -1.23 || orakel BF -0.62 (20<0, 0>0, besser) | Regel -0.72 (20<0, 0>0, besser) || merkmal BF +0.33 (2<0, 18>0, schlechter) | Regel +0.26 (1<0, 17>0, schlechter) || fest BF -0.01 (11<0, 9>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  ZW-S   clu3     k=5 topk    Training -0.47 || orakel BF -0.19 (20<0, 0>0, gleich) | Regel -0.24 (18<0, 0>0, besser) || merkmal BF +0.01 (9<0, 11>0, gleich) | Regel +0.00 (4<0, 5>0, gleich) || fest BF -0.01 (11<0, 9>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  ZW-S   clu3     k=5 zufall  Training +0.00 || orakel BF -0.06 (13<0, 7>0, gleich) | Regel -0.05 (12<0, 8>0, gleich) || merkmal BF +0.66 (0<0, 20>0, schlechter) | Regel +0.49 (0<0, 20>0, schlechter) || fest BF +0.10 (2<0, 18>0, gleich) | Regel +0.09 (4<0, 16>0, gleich)
+  ZW-S   clu3     k=5 bfplus  Training -0.05 || orakel BF -0.09 (20<0, 0>0, gleich) | Regel -0.09 (19<0, 1>0, gleich) || merkmal BF +0.00 (0<0, 10>0, gleich) | Regel +0.02 (8<0, 12>0, gleich) || fest BF +0.00 (5<0, 2>0, gleich) | Regel +0.01 (9<0, 11>0, gleich)
+  ZW-S   stark    k=3 greedy  Training -1.35 || orakel BF -0.51 (20<0, 0>0, besser) | Regel -0.63 (20<0, 0>0, besser) || merkmal BF +0.70 (0<0, 20>0, schlechter) | Regel +0.52 (0<0, 20>0, schlechter) || fest BF +0.16 (0<0, 19>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  ZW-S   stark    k=3 topk    Training -0.58 || orakel BF -0.16 (19<0, 1>0, gleich) | Regel -0.35 (19<0, 0>0, besser) || merkmal BF +0.15 (1<0, 19>0, gleich) | Regel +0.00 (7<0, 4>0, gleich) || fest BF +0.16 (0<0, 19>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  ZW-S   stark    k=3 zufall  Training +0.79 || orakel BF +0.85 (0<0, 20>0, schlechter) | Regel +0.57 (2<0, 18>0, schlechter) || merkmal BF +1.40 (0<0, 20>0, schlechter) | Regel +1.06 (0<0, 20>0, schlechter) || fest BF +0.91 (0<0, 20>0, schlechter) | Regel +0.72 (1<0, 19>0, schlechter)
+  ZW-S   stark    k=3 bfplus  Training -0.06 || orakel BF -0.06 (20<0, 0>0, gleich) | Regel -0.24 (20<0, 0>0, besser) || merkmal BF +0.01 (1<0, 11>0, gleich) | Regel -0.15 (18<0, 1>0, gleich) || fest BF +0.00 (0<0, 3>0, gleich) | Regel -0.15 (19<0, 0>0, gleich)
+  ZW-S   stark    k=5 greedy  Training -1.70 || orakel BF -0.74 (20<0, 0>0, besser) | Regel -0.87 (20<0, 0>0, besser) || merkmal BF +0.84 (0<0, 20>0, schlechter) | Regel +0.75 (0<0, 20>0, schlechter) || fest BF +0.16 (0<0, 19>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  ZW-S   stark    k=5 topk    Training -0.62 || orakel BF -0.40 (20<0, 0>0, besser) | Regel -0.56 (20<0, 0>0, besser) || merkmal BF +0.17 (1<0, 19>0, gleich) | Regel +0.00 (9<0, 6>0, gleich) || fest BF +0.16 (0<0, 19>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  ZW-S   stark    k=5 zufall  Training +0.29 || orakel BF +0.33 (0<0, 20>0, schlechter) | Regel +0.20 (6<0, 14>0, gleich) || merkmal BF +1.16 (0<0, 20>0, schlechter) | Regel +0.91 (0<0, 20>0, schlechter) || fest BF +0.58 (0<0, 20>0, schlechter) | Regel +0.50 (2<0, 18>0, schlechter)
+  ZW-S   stark    k=5 bfplus  Training -0.12 || orakel BF -0.11 (20<0, 0>0, gleich) | Regel -0.30 (20<0, 0>0, besser) || merkmal BF +0.02 (0<0, 16>0, gleich) | Regel -0.15 (15<0, 5>0, gleich) || fest BF +0.00 (0<0, 4>0, gleich) | Regel -0.13 (19<0, 0>0, gleich)
+  EA-S   gl_20_70 k=3 greedy  Training -1.84 || orakel BF -0.92 (20<0, 0>0, besser) | Regel -1.18 (20<0, 0>0, besser) || merkmal BF +0.59 (1<0, 19>0, schlechter) | Regel +0.50 (1<0, 19>0, schlechter) || fest BF +0.06 (3<0, 15>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  EA-S   gl_20_70 k=3 topk    Training -0.72 || orakel BF +0.01 (9<0, 10>0, gleich) | Regel -0.04 (13<0, 0>0, gleich) || merkmal BF +0.06 (3<0, 15>0, gleich) | Regel +0.00 (1<0, 0>0, gleich) || fest BF +0.06 (3<0, 15>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  EA-S   gl_20_70 k=3 zufall  Training -0.64 || orakel BF -0.16 (17<0, 3>0, gleich) | Regel -0.36 (17<0, 3>0, besser) || merkmal BF +0.36 (1<0, 19>0, schlechter) | Regel +0.19 (6<0, 14>0, gleich) || fest BF +0.13 (1<0, 19>0, gleich) | Regel -0.00 (10<0, 10>0, gleich)
+  EA-S   gl_20_70 k=3 bfplus  Training -0.53 || orakel BF -0.29 (20<0, 0>0, besser) | Regel -0.40 (20<0, 0>0, besser) || merkmal BF +0.03 (4<0, 15>0, gleich) | Regel -0.04 (12<0, 7>0, gleich) || fest BF +0.04 (2<0, 15>0, gleich) | Regel -0.03 (12<0, 6>0, gleich)
+  EA-S   gl_20_70 k=5 greedy  Training -2.19 || orakel BF -1.29 (20<0, 0>0, besser) | Regel -1.49 (20<0, 0>0, besser) || merkmal BF +0.76 (1<0, 19>0, schlechter) | Regel +0.62 (2<0, 18>0, schlechter) || fest BF +0.06 (3<0, 15>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  EA-S   gl_20_70 k=5 topk    Training -0.72 || orakel BF -0.00 (10<0, 9>0, gleich) | Regel -0.08 (17<0, 0>0, gleich) || merkmal BF +0.06 (3<0, 15>0, gleich) | Regel +0.00 (1<0, 0>0, gleich) || fest BF +0.06 (3<0, 15>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  EA-S   gl_20_70 k=5 zufall  Training -0.82 || orakel BF -0.46 (19<0, 1>0, besser) | Regel -0.53 (20<0, 0>0, besser) || merkmal BF +0.32 (1<0, 19>0, schlechter) | Regel +0.14 (6<0, 14>0, gleich) || fest BF +0.10 (2<0, 18>0, gleich) | Regel -0.01 (11<0, 9>0, gleich)
+  EA-S   gl_20_70 k=5 bfplus  Training -0.73 || orakel BF -0.49 (20<0, 0>0, besser) | Regel -0.62 (20<0, 0>0, besser) || merkmal BF +0.05 (3<0, 16>0, gleich) | Regel -0.02 (10<0, 9>0, gleich) || fest BF +0.07 (2<0, 15>0, gleich) | Regel -0.01 (10<0, 8>0, gleich)
+  EA-S   clu3     k=3 greedy  Training -0.92 || orakel BF -0.35 (19<0, 1>0, besser) | Regel -0.44 (20<0, 0>0, besser) || merkmal BF +0.25 (2<0, 18>0, schlechter) | Regel +0.13 (0<0, 19>0, gleich) || fest BF +0.03 (7<0, 12>0, gleich) | Regel +0.00 (0<0, 1>0, gleich)
+  EA-S   clu3     k=3 topk    Training -0.25 || orakel BF -0.05 (15<0, 5>0, gleich) | Regel -0.09 (16<0, 0>0, gleich) || merkmal BF +0.03 (7<0, 12>0, gleich) | Regel +0.00 (0<0, 1>0, gleich) || fest BF +0.03 (7<0, 12>0, gleich) | Regel +0.00 (0<0, 1>0, gleich)
+  EA-S   clu3     k=3 zufall  Training -0.21 || orakel BF -0.07 (18<0, 2>0, gleich) | Regel -0.12 (19<0, 1>0, gleich) || merkmal BF +0.11 (4<0, 16>0, gleich) | Regel +0.05 (6<0, 14>0, gleich) || fest BF +0.02 (7<0, 13>0, gleich) | Regel -0.01 (10<0, 8>0, gleich)
+  EA-S   clu3     k=3 bfplus  Training -0.20 || orakel BF -0.11 (20<0, 0>0, gleich) | Regel -0.14 (20<0, 0>0, gleich) || merkmal BF +0.00 (2<0, 6>0, gleich) | Regel -0.03 (11<0, 8>0, gleich) || fest BF +0.00 (5<0, 10>0, gleich) | Regel -0.02 (12<0, 6>0, gleich)
+  EA-S   clu3     k=5 greedy  Training -1.02 || orakel BF -0.47 (19<0, 1>0, besser) | Regel -0.49 (20<0, 0>0, besser) || merkmal BF +0.26 (2<0, 18>0, schlechter) | Regel +0.13 (0<0, 19>0, gleich) || fest BF +0.03 (7<0, 12>0, gleich) | Regel +0.00 (0<0, 1>0, gleich)
+  EA-S   clu3     k=5 topk    Training -0.25 || orakel BF -0.08 (15<0, 5>0, gleich) | Regel -0.09 (17<0, 0>0, gleich) || merkmal BF +0.03 (7<0, 12>0, gleich) | Regel +0.00 (0<0, 1>0, gleich) || fest BF +0.03 (7<0, 12>0, gleich) | Regel +0.00 (0<0, 1>0, gleich)
+  EA-S   clu3     k=5 zufall  Training -0.26 || orakel BF -0.12 (19<0, 1>0, gleich) | Regel -0.20 (20<0, 0>0, besser) || merkmal BF +0.11 (4<0, 16>0, gleich) | Regel +0.05 (6<0, 14>0, gleich) || fest BF +0.02 (8<0, 12>0, gleich) | Regel -0.02 (13<0, 5>0, gleich)
+  EA-S   clu3     k=5 bfplus  Training -0.26 || orakel BF -0.14 (20<0, 0>0, gleich) | Regel -0.22 (20<0, 0>0, besser) || merkmal BF +0.00 (3<0, 8>0, gleich) | Regel -0.02 (11<0, 8>0, gleich) || fest BF +0.00 (6<0, 10>0, gleich) | Regel -0.01 (13<0, 5>0, gleich)
+  EA-S   stark    k=3 greedy  Training -1.62 || orakel BF -0.51 (19<0, 1>0, besser) | Regel -0.75 (20<0, 0>0, besser) || merkmal BF +0.49 (0<0, 20>0, schlechter) | Regel +0.28 (1<0, 19>0, schlechter) || fest BF +0.24 (1<0, 19>0, schlechter) | Regel +0.00 (0<0, 0>0, gleich)
+  EA-S   stark    k=3 topk    Training -0.61 || orakel BF +0.10 (8<0, 12>0, gleich) | Regel -0.14 (17<0, 0>0, gleich) || merkmal BF +0.24 (1<0, 19>0, schlechter) | Regel +0.00 (2<0, 1>0, gleich) || fest BF +0.24 (1<0, 19>0, schlechter) | Regel +0.00 (0<0, 0>0, gleich)
+  EA-S   stark    k=3 zufall  Training -0.41 || orakel BF -0.07 (13<0, 7>0, gleich) | Regel -0.32 (19<0, 1>0, besser) || merkmal BF +0.53 (0<0, 20>0, schlechter) | Regel +0.24 (1<0, 19>0, schlechter) || fest BF +0.27 (0<0, 20>0, schlechter) | Regel +0.03 (8<0, 12>0, gleich)
+  EA-S   stark    k=3 bfplus  Training -0.39 || orakel BF -0.20 (20<0, 0>0, besser) | Regel -0.50 (20<0, 0>0, besser) || merkmal BF +0.02 (3<0, 15>0, gleich) | Regel -0.20 (19<0, 1>0, besser) || fest BF +0.13 (0<0, 18>0, gleich) | Regel -0.10 (16<0, 4>0, gleich)
+  EA-S   stark    k=5 greedy  Training -1.92 || orakel BF -0.75 (20<0, 0>0, besser) | Regel -1.01 (20<0, 0>0, besser) || merkmal BF +0.56 (0<0, 20>0, schlechter) | Regel +0.40 (0<0, 20>0, schlechter) || fest BF +0.24 (1<0, 19>0, schlechter) | Regel +0.00 (0<0, 0>0, gleich)
+  EA-S   stark    k=5 topk    Training -0.61 || orakel BF +0.05 (9<0, 11>0, gleich) | Regel -0.19 (17<0, 0>0, gleich) || merkmal BF +0.24 (1<0, 19>0, schlechter) | Regel +0.00 (2<0, 1>0, gleich) || fest BF +0.24 (1<0, 19>0, schlechter) | Regel +0.00 (0<0, 0>0, gleich)
+  EA-S   stark    k=5 zufall  Training -0.54 || orakel BF -0.24 (19<0, 1>0, besser) | Regel -0.53 (20<0, 0>0, besser) || merkmal BF +0.46 (0<0, 20>0, schlechter) | Regel +0.20 (1<0, 19>0, gleich) || fest BF +0.24 (0<0, 20>0, schlechter) | Regel +0.00 (10<0, 10>0, gleich)
+  EA-S   stark    k=5 bfplus  Training -0.55 || orakel BF -0.29 (20<0, 0>0, besser) | Regel -0.60 (20<0, 0>0, besser) || merkmal BF +0.05 (3<0, 16>0, gleich) | Regel -0.17 (18<0, 2>0, gleich) || fest BF +0.19 (0<0, 19>0, gleich) | Regel -0.04 (14<0, 6>0, gleich)
+  Z-T    gl_20_70 k=3 greedy  Training -1.37 || orakel BF -0.48 (20<0, 0>0, besser) | Regel -0.60 (20<0, 0>0, besser) || merkmal BF +1.11 (0<0, 20>0, schlechter) | Regel +1.03 (2<0, 18>0, schlechter) || fest BF +0.12 (3<0, 14>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  Z-T    gl_20_70 k=3 topk    Training -0.47 || orakel BF -0.14 (17<0, 1>0, gleich) | Regel -0.23 (18<0, 0>0, besser) || merkmal BF +0.11 (3<0, 14>0, gleich) | Regel +0.00 (4<0, 5>0, gleich) || fest BF +0.12 (3<0, 14>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  Z-T    gl_20_70 k=3 zufall  Training +8.92 || orakel BF +9.47 (0<0, 20>0, schlechter) | Regel +9.44 (0<0, 20>0, schlechter) || merkmal BF +9.49 (0<0, 20>0, schlechter) | Regel +9.46 (0<0, 20>0, schlechter) || fest BF +9.49 (0<0, 20>0, schlechter) | Regel +9.46 (0<0, 20>0, schlechter)
+  Z-T    gl_20_70 k=3 bfplus  Training -0.04 || orakel BF -0.06 (19<0, 0>0, gleich) | Regel -0.18 (19<0, 1>0, gleich) || merkmal BF +0.01 (0<0, 10>0, gleich) | Regel -0.07 (13<0, 4>0, gleich) || fest BF +0.00 (0<0, 0>0, gleich) | Regel -0.12 (14<0, 3>0, gleich)
+  Z-T    gl_20_70 k=5 greedy  Training -1.72 || orakel BF -0.69 (20<0, 0>0, besser) | Regel -0.86 (20<0, 0>0, besser) || merkmal BF +1.29 (0<0, 20>0, schlechter) | Regel +1.29 (2<0, 18>0, schlechter) || fest BF +0.12 (3<0, 14>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  Z-T    gl_20_70 k=5 topk    Training -0.47 || orakel BF -0.17 (18<0, 1>0, gleich) | Regel -0.28 (19<0, 0>0, besser) || merkmal BF +0.13 (3<0, 14>0, gleich) | Regel +0.00 (4<0, 6>0, gleich) || fest BF +0.12 (3<0, 14>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  Z-T    gl_20_70 k=5 zufall  Training +0.78 || orakel BF +0.77 (0<0, 20>0, schlechter) | Regel +0.61 (2<0, 18>0, schlechter) || merkmal BF +1.45 (0<0, 20>0, schlechter) | Regel +1.33 (0<0, 20>0, schlechter) || fest BF +0.87 (0<0, 20>0, schlechter) | Regel +0.78 (0<0, 20>0, schlechter)
+  Z-T    gl_20_70 k=5 bfplus  Training -0.07 || orakel BF -0.09 (19<0, 0>0, gleich) | Regel -0.19 (20<0, 0>0, gleich) || merkmal BF +0.02 (0<0, 12>0, gleich) | Regel -0.07 (13<0, 4>0, gleich) || fest BF +0.00 (1<0, 1>0, gleich) | Regel -0.12 (14<0, 3>0, gleich)
+  Z-T    clu3     k=3 greedy  Training -1.12 || orakel BF -0.35 (19<0, 1>0, besser) | Regel -0.44 (20<0, 0>0, besser) || merkmal BF +1.05 (0<0, 20>0, schlechter) | Regel +0.99 (1<0, 19>0, schlechter) || fest BF +0.07 (7<0, 12>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  Z-T    clu3     k=3 topk    Training -0.34 || orakel BF -0.10 (18<0, 1>0, gleich) | Regel -0.15 (17<0, 0>0, gleich) || merkmal BF +0.05 (6<0, 13>0, gleich) | Regel +0.00 (1<0, 2>0, gleich) || fest BF +0.07 (7<0, 12>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  Z-T    clu3     k=3 zufall  Training +22.31 || orakel BF +21.75 (0<0, 20>0, schlechter) | Regel +21.72 (1<0, 19>0, schlechter) || merkmal BF +21.75 (0<0, 20>0, schlechter) | Regel +21.72 (0<0, 20>0, schlechter) || fest BF +21.75 (0<0, 20>0, schlechter) | Regel +21.72 (1<0, 19>0, schlechter)
+  Z-T    clu3     k=3 bfplus  Training +0.00 || orakel BF -0.03 (20<0, 0>0, gleich) | Regel -0.09 (16<0, 4>0, gleich) || merkmal BF +0.00 (1<0, 3>0, gleich) | Regel -0.07 (12<0, 7>0, gleich) || fest BF +0.00 (5<0, 0>0, gleich) | Regel -0.07 (12<0, 7>0, gleich)
+  Z-T    clu3     k=5 greedy  Training -1.34 || orakel BF -0.53 (20<0, 0>0, besser) | Regel -0.65 (20<0, 0>0, besser) || merkmal BF +1.67 (0<0, 20>0, schlechter) | Regel +1.32 (0<0, 20>0, schlechter) || fest BF +0.07 (7<0, 12>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  Z-T    clu3     k=5 topk    Training -0.34 || orakel BF -0.12 (18<0, 1>0, gleich) | Regel -0.18 (17<0, 0>0, gleich) || merkmal BF +0.05 (6<0, 13>0, gleich) | Regel +0.00 (1<0, 2>0, gleich) || fest BF +0.07 (7<0, 12>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  Z-T    clu3     k=5 zufall  Training +1.01 || orakel BF +0.99 (2<0, 18>0, schlechter) | Regel +1.00 (3<0, 17>0, schlechter) || merkmal BF +1.33 (0<0, 20>0, schlechter) | Regel +1.35 (1<0, 19>0, schlechter) || fest BF +1.05 (1<0, 19>0, schlechter) | Regel +1.06 (3<0, 17>0, schlechter)
+  Z-T    clu3     k=5 bfplus  Training -0.02 || orakel BF -0.06 (20<0, 0>0, gleich) | Regel -0.13 (20<0, 0>0, gleich) || merkmal BF +0.00 (1<0, 7>0, gleich) | Regel -0.06 (11<0, 8>0, gleich) || fest BF +0.00 (5<0, 1>0, gleich) | Regel -0.07 (12<0, 7>0, gleich)
+  Z-T    stark    k=3 greedy  Training -1.02 || orakel BF -0.32 (20<0, 0>0, besser) | Regel -0.43 (20<0, 0>0, besser) || merkmal BF +0.48 (0<0, 20>0, schlechter) | Regel +0.13 (1<0, 19>0, gleich) || fest BF +0.13 (1<0, 16>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  Z-T    stark    k=3 topk    Training -0.22 || orakel BF -0.12 (16<0, 1>0, gleich) | Regel -0.18 (17<0, 0>0, gleich) || merkmal BF +0.18 (1<0, 16>0, gleich) | Regel +0.00 (4<0, 4>0, gleich) || fest BF +0.13 (1<0, 16>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  Z-T    stark    k=3 zufall  Training +8.61 || orakel BF +8.87 (0<0, 20>0, schlechter) | Regel +8.84 (0<0, 20>0, schlechter) || merkmal BF +9.14 (0<0, 20>0, schlechter) | Regel +9.12 (0<0, 20>0, schlechter) || fest BF +9.01 (0<0, 20>0, schlechter) | Regel +8.99 (0<0, 20>0, schlechter)
+  Z-T    stark    k=3 bfplus  Training -0.02 || orakel BF -0.02 (18<0, 0>0, gleich) | Regel -0.16 (20<0, 0>0, gleich) || merkmal BF +0.00 (1<0, 9>0, gleich) | Regel -0.07 (15<0, 3>0, gleich) || fest BF +0.00 (0<0, 0>0, gleich) | Regel -0.13 (16<0, 1>0, gleich)
+  Z-T    stark    k=5 greedy  Training -1.25 || orakel BF -0.47 (20<0, 0>0, besser) | Regel -0.62 (20<0, 0>0, besser) || merkmal BF +0.65 (0<0, 20>0, schlechter) | Regel +0.40 (0<0, 20>0, schlechter) || fest BF +0.13 (1<0, 16>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  Z-T    stark    k=5 topk    Training -0.31 || orakel BF -0.16 (18<0, 0>0, gleich) | Regel -0.31 (18<0, 0>0, besser) || merkmal BF +0.18 (1<0, 16>0, gleich) | Regel +0.00 (5<0, 4>0, gleich) || fest BF +0.13 (1<0, 16>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  Z-T    stark    k=5 zufall  Training +1.75 || orakel BF +1.99 (0<0, 20>0, schlechter) | Regel +1.85 (1<0, 19>0, schlechter) || merkmal BF +2.78 (0<0, 20>0, schlechter) | Regel +2.49 (0<0, 20>0, schlechter) || fest BF +2.30 (0<0, 20>0, schlechter) | Regel +2.21 (1<0, 19>0, schlechter)
+  Z-T    stark    k=5 bfplus  Training -0.06 || orakel BF -0.04 (20<0, 0>0, gleich) | Regel -0.19 (20<0, 0>0, gleich) || merkmal BF +0.01 (1<0, 11>0, gleich) | Regel -0.07 (14<0, 4>0, gleich) || fest BF +0.00 (0<0, 1>0, gleich) | Regel -0.13 (16<0, 1>0, gleich)
+  GP0-T  gl_20_70 k=3 greedy  Training -1.09 || orakel BF -0.34 (20<0, 0>0, besser) | Regel -0.47 (20<0, 0>0, besser) || merkmal BF +0.70 (0<0, 20>0, schlechter) | Regel +0.69 (0<0, 20>0, schlechter) || fest BF +0.02 (2<0, 13>0, gleich) | Regel +0.00 (0<0, 1>0, gleich)
+  GP0-T  gl_20_70 k=3 topk    Training -0.19 || orakel BF -0.03 (12<0, 2>0, gleich) | Regel -0.05 (13<0, 1>0, gleich) || merkmal BF +0.02 (2<0, 13>0, gleich) | Regel +0.00 (2<0, 2>0, gleich) || fest BF +0.02 (2<0, 13>0, gleich) | Regel +0.00 (0<0, 1>0, gleich)
+  GP0-T  gl_20_70 k=3 zufall  Training +23.78 || orakel BF +23.98 (0<0, 20>0, schlechter) | Regel +23.77 (0<0, 20>0, schlechter) || merkmal BF +24.44 (0<0, 20>0, schlechter) | Regel +24.23 (0<0, 20>0, schlechter) || fest BF +24.05 (0<0, 20>0, schlechter) | Regel +23.83 (0<0, 20>0, schlechter)
+  GP0-T  gl_20_70 k=3 bfplus  Training -0.02 || orakel BF -0.04 (18<0, 0>0, gleich) | Regel -0.09 (19<0, 1>0, gleich) || merkmal BF +0.00 (0<0, 10>0, gleich) | Regel -0.00 (10<0, 6>0, gleich) || fest BF +0.00 (0<0, 0>0, gleich) | Regel -0.01 (12<0, 3>0, gleich)
+  GP0-T  gl_20_70 k=5 greedy  Training -1.28 || orakel BF -0.49 (20<0, 0>0, besser) | Regel -0.68 (20<0, 0>0, besser) || merkmal BF +0.97 (0<0, 20>0, schlechter) | Regel +0.94 (0<0, 20>0, schlechter) || fest BF +0.02 (2<0, 13>0, gleich) | Regel +0.00 (0<0, 1>0, gleich)
+  GP0-T  gl_20_70 k=5 topk    Training -0.19 || orakel BF -0.06 (14<0, 0>0, gleich) | Regel -0.11 (14<0, 1>0, gleich) || merkmal BF +0.02 (2<0, 13>0, gleich) | Regel +0.00 (4<0, 2>0, gleich) || fest BF +0.02 (2<0, 13>0, gleich) | Regel +0.00 (0<0, 1>0, gleich)
+  GP0-T  gl_20_70 k=5 zufall  Training +2.40 || orakel BF +2.05 (0<0, 20>0, schlechter) | Regel +2.02 (0<0, 20>0, schlechter) || merkmal BF +2.55 (0<0, 20>0, schlechter) | Regel +2.51 (0<0, 20>0, schlechter) || fest BF +2.15 (0<0, 20>0, schlechter) | Regel +2.13 (0<0, 20>0, schlechter)
+  GP0-T  gl_20_70 k=5 bfplus  Training -0.09 || orakel BF -0.08 (20<0, 0>0, gleich) | Regel -0.14 (19<0, 1>0, gleich) || merkmal BF +0.02 (0<0, 14>0, gleich) | Regel -0.00 (10<0, 8>0, gleich) || fest BF +0.00 (0<0, 1>0, gleich) | Regel -0.01 (12<0, 3>0, gleich)
+  GP0-T  clu3     k=3 greedy  Training -0.87 || orakel BF -0.41 (20<0, 0>0, besser) | Regel -0.53 (20<0, 0>0, besser) || merkmal BF +0.84 (0<0, 20>0, schlechter) | Regel +0.55 (0<0, 20>0, schlechter) || fest BF +0.01 (7<0, 10>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  GP0-T  clu3     k=3 topk    Training -0.23 || orakel BF -0.03 (19<0, 0>0, gleich) | Regel -0.05 (14<0, 0>0, gleich) || merkmal BF +0.01 (7<0, 10>0, gleich) | Regel +0.00 (1<0, 0>0, gleich) || fest BF +0.01 (7<0, 10>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  GP0-T  clu3     k=3 zufall  Training +6.66 || orakel BF +6.59 (4<0, 16>0, schlechter) | Regel +6.15 (2<0, 18>0, schlechter) || merkmal BF +6.65 (4<0, 16>0, schlechter) | Regel +6.22 (1<0, 18>0, schlechter) || fest BF +6.60 (4<0, 16>0, schlechter) | Regel +6.16 (1<0, 18>0, schlechter)
+  GP0-T  clu3     k=3 bfplus  Training +0.00 || orakel BF -0.05 (20<0, 0>0, gleich) | Regel -0.07 (18<0, 2>0, gleich) || merkmal BF +0.00 (1<0, 4>0, gleich) | Regel -0.00 (10<0, 8>0, gleich) || fest BF +0.00 (6<0, 0>0, gleich) | Regel -0.01 (10<0, 6>0, gleich)
+  GP0-T  clu3     k=5 greedy  Training -0.92 || orakel BF -0.49 (20<0, 0>0, besser) | Regel -0.60 (20<0, 0>0, besser) || merkmal BF +0.92 (0<0, 20>0, schlechter) | Regel +0.83 (0<0, 20>0, schlechter) || fest BF +0.01 (7<0, 10>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  GP0-T  clu3     k=5 topk    Training -0.23 || orakel BF -0.09 (19<0, 0>0, gleich) | Regel -0.10 (14<0, 0>0, gleich) || merkmal BF +0.01 (7<0, 10>0, gleich) | Regel +0.00 (1<0, 1>0, gleich) || fest BF +0.01 (7<0, 10>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  GP0-T  clu3     k=5 zufall  Training +0.00 || orakel BF -0.01 (11<0, 9>0, gleich) | Regel +0.00 (10<0, 10>0, gleich) || merkmal BF +0.18 (4<0, 16>0, gleich) | Regel +0.22 (3<0, 16>0, schlechter) || fest BF -0.00 (10<0, 10>0, gleich) | Regel +0.02 (5<0, 13>0, gleich)
+  GP0-T  clu3     k=5 bfplus  Training -0.04 || orakel BF -0.07 (20<0, 0>0, gleich) | Regel -0.09 (19<0, 1>0, gleich) || merkmal BF +0.00 (1<0, 5>0, gleich) | Regel +0.00 (9<0, 9>0, gleich) || fest BF +0.00 (5<0, 1>0, gleich) | Regel -0.01 (10<0, 6>0, gleich)
+  GP0-T  stark    k=3 greedy  Training -0.83 || orakel BF -0.24 (20<0, 0>0, besser) | Regel -0.38 (20<0, 0>0, besser) || merkmal BF +0.53 (0<0, 20>0, schlechter) | Regel +0.33 (1<0, 19>0, schlechter) || fest BF +0.10 (0<0, 15>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  GP0-T  stark    k=3 topk    Training -0.22 || orakel BF -0.04 (12<0, 3>0, gleich) | Regel -0.20 (14<0, 0>0, gleich) || merkmal BF +0.10 (1<0, 14>0, gleich) | Regel +0.00 (2<0, 1>0, gleich) || fest BF +0.10 (0<0, 15>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  GP0-T  stark    k=3 zufall  Training +27.61 || orakel BF +28.44 (0<0, 20>0, schlechter) | Regel +28.39 (0<0, 20>0, schlechter) || merkmal BF +28.80 (0<0, 20>0, schlechter) | Regel +28.59 (0<0, 20>0, schlechter) || fest BF +28.53 (0<0, 20>0, schlechter) | Regel +28.48 (0<0, 20>0, schlechter)
+  GP0-T  stark    k=3 bfplus  Training +0.00 || orakel BF -0.02 (20<0, 0>0, gleich) | Regel -0.12 (20<0, 0>0, gleich) || merkmal BF +0.00 (1<0, 7>0, gleich) | Regel -0.08 (15<0, 2>0, gleich) || fest BF +0.00 (0<0, 0>0, gleich) | Regel -0.10 (15<0, 0>0, gleich)
+  GP0-T  stark    k=5 greedy  Training -1.08 || orakel BF -0.34 (20<0, 0>0, besser) | Regel -0.45 (20<0, 0>0, besser) || merkmal BF +0.76 (0<0, 20>0, schlechter) | Regel +0.41 (0<0, 20>0, schlechter) || fest BF +0.10 (0<0, 15>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  GP0-T  stark    k=5 topk    Training -0.22 || orakel BF -0.08 (15<0, 0>0, gleich) | Regel -0.24 (15<0, 0>0, besser) || merkmal BF +0.10 (1<0, 14>0, gleich) | Regel +0.00 (3<0, 2>0, gleich) || fest BF +0.10 (0<0, 15>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  GP0-T  stark    k=5 zufall  Training +2.93 || orakel BF +3.00 (0<0, 20>0, schlechter) | Regel +2.80 (1<0, 19>0, schlechter) || merkmal BF +3.57 (0<0, 20>0, schlechter) | Regel +3.48 (1<0, 19>0, schlechter) || fest BF +3.22 (0<0, 20>0, schlechter) | Regel +2.96 (1<0, 19>0, schlechter)
+  GP0-T  stark    k=5 bfplus  Training -0.06 || orakel BF -0.04 (20<0, 0>0, gleich) | Regel -0.14 (20<0, 0>0, gleich) || merkmal BF +0.00 (1<0, 8>0, gleich) | Regel -0.08 (15<0, 2>0, gleich) || fest BF +0.00 (0<0, 1>0, gleich) | Regel -0.09 (15<0, 0>0, gleich)
+  GP-T   gl_20_70 k=3 greedy  Training -1.42 || orakel BF -0.47 (19<0, 1>0, besser) | Regel -0.67 (20<0, 0>0, besser) || merkmal BF +1.01 (0<0, 20>0, schlechter) | Regel +0.66 (1<0, 19>0, schlechter) || fest BF +0.12 (4<0, 14>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  GP-T   gl_20_70 k=3 topk    Training -0.39 || orakel BF +0.03 (7<0, 11>0, gleich) | Regel +0.00 (9<0, 0>0, gleich) || merkmal BF +0.12 (4<0, 14>0, gleich) | Regel +0.00 (2<0, 2>0, gleich) || fest BF +0.12 (4<0, 14>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  GP-T   gl_20_70 k=3 zufall  Training -0.10 || orakel BF -0.05 (11<0, 8>0, gleich) | Regel -0.09 (14<0, 6>0, gleich) || merkmal BF +0.40 (0<0, 19>0, schlechter) | Regel +0.26 (4<0, 16>0, schlechter) || fest BF +0.10 (2<0, 16>0, gleich) | Regel +0.03 (8<0, 11>0, gleich)
+  GP-T   gl_20_70 k=3 bfplus  Training -0.15 || orakel BF -0.09 (19<0, 0>0, gleich) | Regel -0.26 (18<0, 2>0, besser) || merkmal BF +0.02 (1<0, 14>0, gleich) | Regel -0.08 (12<0, 6>0, gleich) || fest BF +0.00 (3<0, 8>0, gleich) | Regel -0.11 (14<0, 4>0, gleich)
+  GP-T   gl_20_70 k=5 greedy  Training -1.68 || orakel BF -0.83 (19<0, 1>0, besser) | Regel -0.91 (20<0, 0>0, besser) || merkmal BF +1.37 (0<0, 20>0, schlechter) | Regel +0.93 (1<0, 19>0, schlechter) || fest BF +0.12 (4<0, 14>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  GP-T   gl_20_70 k=5 topk    Training -0.47 || orakel BF -0.00 (10<0, 9>0, gleich) | Regel -0.09 (15<0, 0>0, gleich) || merkmal BF +0.12 (4<0, 14>0, gleich) | Regel +0.00 (2<0, 4>0, gleich) || fest BF +0.12 (4<0, 14>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  GP-T   gl_20_70 k=5 zufall  Training -0.23 || orakel BF -0.11 (18<0, 2>0, gleich) | Regel -0.31 (19<0, 1>0, besser) || merkmal BF +0.33 (0<0, 20>0, schlechter) | Regel +0.25 (4<0, 16>0, schlechter) || fest BF +0.06 (2<0, 16>0, gleich) | Regel -0.05 (12<0, 7>0, gleich)
+  GP-T   gl_20_70 k=5 bfplus  Training -0.24 || orakel BF -0.17 (20<0, 0>0, gleich) | Regel -0.32 (18<0, 2>0, besser) || merkmal BF +0.05 (1<0, 17>0, gleich) | Regel +0.00 (9<0, 9>0, gleich) || fest BF +0.01 (2<0, 12>0, gleich) | Regel -0.07 (14<0, 4>0, gleich)
+  GP-T   clu3     k=3 greedy  Training -0.90 || orakel BF -0.27 (19<0, 1>0, besser) | Regel -0.34 (18<0, 0>0, besser) || merkmal BF +0.31 (4<0, 15>0, schlechter) | Regel +0.28 (1<0, 15>0, schlechter) || fest BF +0.00 (9<0, 8>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  GP-T   clu3     k=3 topk    Training -0.23 || orakel BF -0.00 (13<0, 5>0, gleich) | Regel +0.00 (9<0, 0>0, gleich) || merkmal BF +0.00 (9<0, 8>0, gleich) | Regel +0.00 (0<0, 0>0, gleich) || fest BF +0.00 (9<0, 8>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  GP-T   clu3     k=3 zufall  Training +0.00 || orakel BF -0.02 (16<0, 4>0, gleich) | Regel -0.02 (16<0, 3>0, gleich) || merkmal BF +0.06 (4<0, 15>0, gleich) | Regel +0.03 (4<0, 14>0, gleich) || fest BF +0.01 (7<0, 12>0, gleich) | Regel +0.00 (6<0, 10>0, gleich)
+  GP-T   clu3     k=3 bfplus  Training -0.02 || orakel BF -0.08 (20<0, 0>0, gleich) | Regel -0.08 (20<0, 0>0, gleich) || merkmal BF +0.00 (2<0, 3>0, gleich) | Regel +0.00 (9<0, 8>0, gleich) || fest BF +0.00 (4<0, 6>0, gleich) | Regel +0.00 (8<0, 7>0, gleich)
+  GP-T   clu3     k=5 greedy  Training -0.91 || orakel BF -0.32 (20<0, 0>0, besser) | Regel -0.39 (19<0, 0>0, besser) || merkmal BF +0.39 (4<0, 15>0, schlechter) | Regel +0.32 (1<0, 15>0, schlechter) || fest BF +0.00 (9<0, 8>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  GP-T   clu3     k=5 topk    Training -0.23 || orakel BF -0.01 (15<0, 5>0, gleich) | Regel -0.03 (13<0, 0>0, gleich) || merkmal BF +0.00 (9<0, 8>0, gleich) | Regel +0.00 (0<0, 0>0, gleich) || fest BF +0.00 (9<0, 8>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  GP-T   clu3     k=5 zufall  Training -0.12 || orakel BF -0.07 (20<0, 0>0, gleich) | Regel -0.08 (20<0, 0>0, gleich) || merkmal BF +0.06 (4<0, 15>0, gleich) | Regel +0.03 (4<0, 14>0, gleich) || fest BF +0.00 (8<0, 11>0, gleich) | Regel +0.00 (8<0, 8>0, gleich)
+  GP-T   clu3     k=5 bfplus  Training -0.09 || orakel BF -0.09 (20<0, 0>0, gleich) | Regel -0.09 (20<0, 0>0, gleich) || merkmal BF +0.00 (2<0, 4>0, gleich) | Regel +0.00 (9<0, 9>0, gleich) || fest BF +0.00 (3<0, 8>0, gleich) | Regel +0.00 (8<0, 6>0, gleich)
+  GP-T   stark    k=3 greedy  Training -1.06 || orakel BF -0.32 (19<0, 1>0, besser) | Regel -0.37 (20<0, 0>0, besser) || merkmal BF +0.37 (0<0, 20>0, schlechter) | Regel +0.17 (1<0, 18>0, gleich) || fest BF +0.09 (1<0, 13>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  GP-T   stark    k=3 topk    Training -0.24 || orakel BF +0.03 (5<0, 10>0, gleich) | Regel +0.00 (8<0, 0>0, gleich) || merkmal BF +0.09 (1<0, 13>0, gleich) | Regel +0.00 (0<0, 0>0, gleich) || fest BF +0.09 (1<0, 13>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  GP-T   stark    k=3 zufall  Training +0.00 || orakel BF +0.04 (8<0, 12>0, gleich) | Regel -0.01 (13<0, 7>0, gleich) || merkmal BF +0.36 (0<0, 18>0, schlechter) | Regel +0.23 (2<0, 16>0, schlechter) || fest BF +0.13 (1<0, 14>0, gleich) | Regel +0.02 (4<0, 13>0, gleich)
+  GP-T   stark    k=3 bfplus  Training -0.08 || orakel BF -0.06 (20<0, 0>0, gleich) | Regel -0.20 (20<0, 0>0, gleich) || merkmal BF +0.01 (1<0, 12>0, gleich) | Regel -0.03 (12<0, 2>0, gleich) || fest BF +0.00 (1<0, 8>0, gleich) | Regel -0.01 (10<0, 4>0, gleich)
+  GP-T   stark    k=5 greedy  Training -1.34 || orakel BF -0.41 (19<0, 1>0, besser) | Regel -0.55 (20<0, 0>0, besser) || merkmal BF +0.62 (0<0, 20>0, schlechter) | Regel +0.35 (1<0, 18>0, schlechter) || fest BF +0.09 (1<0, 13>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  GP-T   stark    k=5 topk    Training -0.24 || orakel BF +0.02 (5<0, 10>0, gleich) | Regel -0.03 (11<0, 0>0, gleich) || merkmal BF +0.09 (1<0, 13>0, gleich) | Regel +0.00 (0<0, 0>0, gleich) || fest BF +0.09 (1<0, 13>0, gleich) | Regel +0.00 (0<0, 0>0, gleich)
+  GP-T   stark    k=5 zufall  Training -0.16 || orakel BF -0.05 (19<0, 1>0, gleich) | Regel -0.14 (20<0, 0>0, gleich) || merkmal BF +0.28 (0<0, 19>0, schlechter) | Regel +0.16 (4<0, 15>0, gleich) || fest BF +0.11 (1<0, 14>0, gleich) | Regel +0.00 (8<0, 9>0, gleich)
+  GP-T   stark    k=5 bfplus  Training -0.11 || orakel BF -0.08 (20<0, 0>0, gleich) | Regel -0.22 (20<0, 0>0, besser) || merkmal BF +0.01 (1<0, 13>0, gleich) | Regel -0.01 (12<0, 3>0, gleich) || fest BF +0.00 (1<0, 8>0, gleich) | Regel -0.01 (10<0, 4>0, gleich)
+greedy aus den Pools EA-S und GP-T, k = 3 und 5, same60 (12 Zellen):
+   ('orakel', 'bf') {'besser': 12, 'gleich': 0, 'schlechter': 0}
+   ('orakel', 'regel') {'besser': 12, 'gleich': 0, 'schlechter': 0}
+   ('merkmal', 'bf') {'besser': 0, 'gleich': 0, 'schlechter': 12}
+   ('merkmal', 'regel') {'besser': 0, 'gleich': 3, 'schlechter': 9}
+   ('fest', 'bf') {'besser': 0, 'gleich': 10, 'schlechter': 2}
+   ('fest', 'regel') {'besser': 0, 'gleich': 12, 'schlechter': 0}
+Spanne greedy k=3 Orakel gegen die Einzelregel (6 Zellen): -1.18 bis -0.34; gegen Best Fit: -0.92 bis -0.27
+Einzelregel der Pool-Arme gegen Best Fit (same60): {('gl_20_70', 'EA-S'): '+0.06', ('gl_20_70', 'GP-T'): '+0.12', ('clu3', 'EA-S'): '+0.03', ('clu3', 'GP-T'): '+0.00', ('stark', 'EA-S'): '+0.24', ('stark', 'GP-T'): '+0.09'}
+Anteil Zufall an greedy (Orakel gegen Best Fit, Verhältnis der Mediane): {('gl_20_70', 'EA-S', 3): '18 %', ('gl_20_70', 'EA-S', 5): '36 %', ('gl_20_70', 'GP-T', 3): '11 %', ('gl_20_70', 'GP-T', 5): '14 %', ('clu3', 'EA-S', 3): '19 %', ('clu3', 'EA-S', 5): '26 %', ('clu3', 'GP-T', 3): '8 %', ('clu3', 'GP-T', 5): '21 %', ('stark', 'EA-S', 3): '14 %', ('stark', 'EA-S', 5): '32 %', ('stark', 'GP-T', 3): '-11 %', ('stark', 'GP-T', 5): '13 %'}
+
+== T6 greedy mit Orakelwahl auf allen Testmengen (gegen Best Fit) ==
+  EA-S  gl_20_70 k=3 same60 -0.92 (20<0, 0>0, besser) | n30 -1.09 (19<0, 1>0, besser) | n120 -0.91 (20<0, 0>0, besser) | fremd1 -0.08 (11<0, 9>0, gleich) | fremd2 -0.40 (17<0, 3>0, besser)
+  EA-S  gl_20_70 k=5 same60 -1.29 (20<0, 0>0, besser) | n30 -1.57 (19<0, 1>0, besser) | n120 -1.17 (20<0, 0>0, besser) | fremd1 -0.16 (15<0, 5>0, gleich) | fremd2 -0.65 (20<0, 0>0, besser)
+  EA-S  clu3     k=3 same60 -0.35 (19<0, 1>0, besser) | n30 -0.73 (20<0, 0>0, besser) | n120 -0.15 (15<0, 5>0, gleich) | fremd1 -0.02 (11<0, 9>0, gleich) | fremd2 +0.19 (6<0, 14>0, gleich)
+  EA-S  clu3     k=5 same60 -0.47 (19<0, 1>0, besser) | n30 -0.78 (20<0, 0>0, besser) | n120 -0.21 (18<0, 2>0, besser) | fremd1 -0.09 (13<0, 7>0, gleich) | fremd2 +0.04 (10<0, 10>0, gleich)
+  EA-S  stark    k=3 same60 -0.51 (19<0, 1>0, besser) | n30 -0.47 (18<0, 2>0, besser) | n120 -0.45 (20<0, 0>0, besser) | fremd1 -0.89 (20<0, 0>0, besser) | fremd2 -0.10 (13<0, 7>0, gleich)
+  EA-S  stark    k=5 same60 -0.75 (20<0, 0>0, besser) | n30 -0.86 (20<0, 0>0, besser) | n120 -0.65 (20<0, 0>0, besser) | fremd1 -1.15 (20<0, 0>0, besser) | fremd2 -0.24 (14<0, 6>0, gleich)
+  GP-T  gl_20_70 k=3 same60 -0.47 (19<0, 1>0, besser) | n30 -1.13 (19<0, 1>0, besser) | n120 -0.31 (20<0, 0>0, besser) | fremd1 -0.12 (15<0, 5>0, gleich) | fremd2 -0.11 (14<0, 6>0, gleich)
+  GP-T  gl_20_70 k=5 same60 -0.83 (19<0, 1>0, besser) | n30 -1.46 (19<0, 1>0, besser) | n120 -0.48 (20<0, 0>0, besser) | fremd1 -0.25 (17<0, 3>0, besser) | fremd2 -0.38 (17<0, 3>0, besser)
+  GP-T  clu3     k=3 same60 -0.27 (19<0, 1>0, besser) | n30 -0.66 (16<0, 3>0, besser) | n120 -0.11 (17<0, 3>0, gleich) | fremd1 -0.00 (10<0, 9>0, gleich) | fremd2 +0.02 (9<0, 10>0, gleich)
+  GP-T  clu3     k=5 same60 -0.32 (20<0, 0>0, besser) | n30 -0.76 (18<0, 1>0, besser) | n120 -0.14 (19<0, 1>0, gleich) | fremd1 -0.13 (14<0, 5>0, gleich) | fremd2 -0.04 (13<0, 6>0, gleich)
+  GP-T  stark    k=3 same60 -0.32 (19<0, 1>0, besser) | n30 -0.48 (19<0, 0>0, besser) | n120 -0.21 (19<0, 1>0, besser) | fremd1 -0.31 (18<0, 2>0, besser) | fremd2 -0.32 (19<0, 1>0, besser)
+  GP-T  stark    k=5 same60 -0.41 (19<0, 1>0, besser) | n30 -0.74 (20<0, 0>0, besser) | n120 -0.36 (19<0, 1>0, besser) | fremd1 -0.58 (18<0, 2>0, besser) | fremd2 -0.38 (19<0, 1>0, besser)
+topk k=5 mit Orakelwahl gegen die Einzelregel: gleich in 25 von 30 Zellen; Ausnahmen [('EA-S', 'clu3', 'fremd1', 'besser', '-0.37'), ('EA-S', 'clu3', 'fremd2', 'besser', '-0.39'), ('EA-S', 'stark', 'n30', 'besser', '-0.26'), ('EA-S', 'stark', 'fremd1', 'besser', '-0.20'), ('GP-T', 'gl_20_70', 'fremd2', 'besser', '-0.26')]
+greedy mit merkmal gegen Best Fit, alle 60 Zellen (2 Pools, 3 Familien, k 3/5, 5 Testmengen): {'besser': 0, 'gleich': 6, 'schlechter': 54}
+greedy mit fest gegen Best Fit, alle 60 Zellen (2 Pools, 3 Familien, k 3/5, 5 Testmengen): {'besser': 0, 'gleich': 42, 'schlechter': 18}
+
+== T7 Training gegen Test der Mengen (greedy, Orakel, gegen Best Fit; Verhältnis Test/Training) ==
+  EA-S  gl_20_70 k=3 Training -1.84 Test -0.92 (50 %)
+  EA-S  gl_20_70 k=5 Training -2.19 Test -1.29 (59 %)
+  EA-S  clu3     k=3 Training -0.92 Test -0.35 (38 %)
+  EA-S  clu3     k=5 Training -1.02 Test -0.47 (46 %)
+  EA-S  stark    k=3 Training -1.62 Test -0.51 (32 %)
+  EA-S  stark    k=5 Training -1.92 Test -0.75 (39 %)
+  GP-T  gl_20_70 k=3 Training -1.42 Test -0.47 (33 %)
+  GP-T  gl_20_70 k=5 Training -1.68 Test -0.83 (50 %)
+  GP-T  clu3     k=3 Training -0.90 Test -0.27 (29 %)
+  GP-T  clu3     k=5 Training -0.91 Test -0.32 (36 %)
+  GP-T  stark    k=3 Training -1.06 Test -0.32 (30 %)
+  GP-T  stark    k=5 Training -1.34 Test -0.41 (30 %)
+Spanne des Verhältnisses: 29 % bis 59 %
+
+== T8 100 Trainingsinstanzen (10 Läufe; Median, Läufe < 0) ==
+  gl_20_70 Z-S   Regel: Training -0.12 (mit 20: -0.46) Test -0.05 (6<0, 4>0; mit 20: +0.13)
+       k=3 greedy: or -1.23 (10<0, 0>0) me +0.83 (0<0, 10>0) fe -0.05 (6<0, 4>0) | topk: or -0.47 (10<0, 0>0) me -0.04 (6<0, 4>0) fe -0.05 (6<0, 4>0) | zufall: or +0.76 (0<0, 10>0) me +1.40 (0<0, 10>0) fe +0.96 (0<0, 10>0)
+       k=5 greedy: or -1.81 (10<0, 0>0) me +1.07 (0<0, 10>0) fe -0.05 (6<0, 4>0) | topk: or -0.59 (10<0, 0>0) me -0.04 (6<0, 4>0) fe -0.05 (6<0, 4>0) | zufall: or +0.27 (2<0, 8>0) me +1.07 (0<0, 10>0) fe +0.61 (0<0, 10>0)
+  gl_20_70 EA-S  Regel: Training -0.41 (mit 20: -0.72) Test -0.09 (7<0, 3>0; mit 20: +0.06)
+       k=3 greedy: or -1.11 (10<0, 0>0) me +0.43 (2<0, 8>0) fe -0.09 (7<0, 3>0) | topk: or -0.12 (7<0, 3>0) me -0.09 (7<0, 3>0) fe -0.09 (7<0, 3>0) | zufall: or -0.26 (9<0, 1>0) me +0.08 (3<0, 7>0) fe -0.05 (7<0, 3>0)
+       k=5 greedy: or -1.48 (10<0, 0>0) me +0.58 (0<0, 10>0) fe -0.09 (7<0, 3>0) | topk: or -0.22 (9<0, 1>0) me -0.09 (7<0, 3>0) fe -0.09 (7<0, 3>0) | zufall: or -0.40 (10<0, 0>0) me +0.09 (3<0, 7>0) fe -0.07 (9<0, 1>0)
+  gl_20_70 GP-T  Regel: Training -0.13 (mit 20: -0.35) Test -0.00 (5<0, 4>0; mit 20: +0.12)
+       k=3 greedy: or -0.98 (10<0, 0>0) me +0.40 (1<0, 9>0) fe -0.00 (5<0, 4>0) | topk: or -0.00 (5<0, 4>0) me -0.00 (5<0, 4>0) fe -0.00 (5<0, 4>0) | zufall: or -0.02 (5<0, 5>0) me +0.30 (0<0, 10>0) fe +0.08 (1<0, 8>0)
+       k=5 greedy: or -1.24 (10<0, 0>0) me +0.71 (0<0, 10>0) fe -0.00 (5<0, 4>0) | topk: or -0.01 (5<0, 4>0) me -0.00 (5<0, 4>0) fe -0.00 (5<0, 4>0) | zufall: or -0.11 (10<0, 0>0) me +0.22 (0<0, 10>0) fe +0.00 (2<0, 5>0)
+  stark    Z-S   Regel: Training -0.09 (mit 20: -0.23) Test +0.10 (0<0, 10>0; mit 20: +0.18)
+       k=3 greedy: or -0.52 (10<0, 0>0) me +0.65 (0<0, 10>0) fe +0.10 (0<0, 10>0) | topk: or -0.14 (10<0, 0>0) me +0.11 (0<0, 10>0) fe +0.10 (0<0, 10>0) | zufall: or +1.04 (0<0, 10>0) me +1.77 (0<0, 10>0) fe +1.28 (0<0, 10>0)
+       k=5 greedy: or -0.87 (10<0, 0>0) me +0.98 (0<0, 10>0) fe +0.10 (0<0, 10>0) | topk: or -0.19 (10<0, 0>0) me +0.11 (0<0, 10>0) fe +0.10 (0<0, 10>0) | zufall: or +0.25 (0<0, 10>0) me +1.28 (0<0, 10>0) fe +0.51 (0<0, 10>0)
+  stark    EA-S  Regel: Training -0.29 (mit 20: -0.57) Test +0.10 (0<0, 10>0; mit 20: +0.24)
+       k=3 greedy: or -0.57 (10<0, 0>0) me +0.15 (0<0, 10>0) fe +0.10 (0<0, 10>0) | topk: or +0.07 (2<0, 8>0) me +0.10 (0<0, 10>0) fe +0.10 (0<0, 10>0) | zufall: or -0.09 (10<0, 0>0) me +0.33 (0<0, 10>0) fe +0.11 (0<0, 10>0)
+       k=5 greedy: or -0.83 (10<0, 0>0) me +0.32 (0<0, 10>0) fe +0.10 (0<0, 10>0) | topk: or +0.05 (2<0, 8>0) me +0.10 (0<0, 10>0) fe +0.10 (0<0, 10>0) | zufall: or -0.22 (10<0, 0>0) me +0.31 (0<0, 10>0) fe +0.11 (0<0, 10>0)
+  stark    GP-T  Regel: Training -0.11 (mit 20: -0.24) Test +0.04 (0<0, 9>0; mit 20: +0.09)
+       k=3 greedy: or -0.46 (10<0, 0>0) me +0.34 (0<0, 10>0) fe +0.04 (0<0, 9>0) | topk: or +0.02 (2<0, 7>0) me +0.04 (0<0, 9>0) fe +0.04 (0<0, 9>0) | zufall: or +0.10 (4<0, 6>0) me +0.45 (0<0, 10>0) fe +0.18 (0<0, 10>0)
+       k=5 greedy: or -0.61 (10<0, 0>0) me +0.57 (0<0, 10>0) fe +0.04 (0<0, 9>0) | topk: or -0.00 (5<0, 4>0) me +0.04 (0<0, 9>0) fe +0.04 (0<0, 9>0) | zufall: or -0.07 (8<0, 2>0) me +0.37 (0<0, 10>0) fe +0.03 (0<0, 10>0)
+
+== T9 Portfolio Best Fit, First Fit, Worst Fit (gegen Best Fit) ==
+  gl_20_70 same60 O -0.09 M +0.00 F +0.00 | n30 O -0.19 M +0.00 F +0.00 | n120 O -0.02 M +0.01 F +0.00 | fremd1 O -0.09 M +0.00 F +0.00 | fremd2 O -0.04 M +0.00 F +0.00
+  clu3     same60 O -0.09 M +0.00 F +0.00 | n30 O -0.04 M +0.00 F +0.00 | n120 O -0.04 M +0.00 F +0.00 | fremd1 O -0.09 M +0.00 F +0.00 | fremd2 O -0.04 M +0.00 F +0.00
+  stark    same60 O -0.04 M +0.00 F +0.00 | n30 O -0.12 M +0.00 F +0.00 | n120 O -0.07 M +0.00 F +0.00 | fremd1 O -0.09 M +0.00 F +0.00 | fremd2 O -0.09 M +0.00 F +0.00
+
+== T10 Kinder der Variation (20 Trainingssätze x 300 Kinder je Zelle) ==
+  gl_20_70 bf      Kinder 6000: besser 123 (2.0 %), gleich 3434 (57.2 %), gleichwertig 21, schlechter 2422 (40.4 %); auch Test besser 10 von 123; besser als BF 123 (2.0 %); Eltern schlechter als BF in 0 von 20 Sätzen
+       nach Art: parameter n 2999 besser 37 (1.2 %) gleich 2107 | vorlage n 1204 besser 19 (1.6 %) gleich 49 | zweiter_term n 1797 besser 67 (3.7 %) gleich 1278
+  gl_20_70 s1_20   Kinder 6000: besser 3201 (53.4 %), gleich 392 (6.5 %), gleichwertig 2, schlechter 2405 (40.1 %); auch Test besser 3167 von 3201; besser als BF 25 (0.4 %); Eltern schlechter als BF in 20 von 20 Sätzen
+       nach Art: parameter n 3013 besser 1332 (44.2 %) gleich 269 | vorlage n 1202 besser 795 (66.1 %) gleich 3 | zweiter_term n 1785 besser 1074 (60.2 %) gleich 120
+  gl_20_70 frisch  Kinder 6000: besser 2146 (35.8 %), gleich 1572 (26.2 %), gleichwertig 11, schlechter 2271 (37.9 %); auch Test besser 2041 von 2146; besser als BF 71 (1.2 %); Eltern schlechter als BF in 18 von 20 Sätzen
+       nach Art: parameter n 3036 besser 1018 (33.5 %) gleich 1045 | vorlage n 1205 besser 447 (37.1 %) gleich 36 | zweiter_term n 1759 besser 681 (38.7 %) gleich 491
+  clu3     bf      Kinder 6000: besser 159 (2.6 %), gleich 4709 (78.5 %), gleichwertig 2, schlechter 1130 (18.8 %); auch Test besser 115 von 159; besser als BF 159 (2.6 %); Eltern schlechter als BF in 0 von 20 Sätzen
+       nach Art: parameter n 3042 besser 4 (0.1 %) gleich 2852 | vorlage n 1154 besser 74 (6.4 %) gleich 288 | zweiter_term n 1804 besser 81 (4.5 %) gleich 1569
+  clu3     s1_20   Kinder 6000: besser 2734 (45.6 %), gleich 1221 (20.4 %), gleichwertig 52, schlechter 1993 (33.2 %); auch Test besser 2606 von 2734; besser als BF 175 (2.9 %); Eltern schlechter als BF in 20 von 20 Sätzen
+       nach Art: parameter n 2928 besser 1082 (37.0 %) gleich 761 | vorlage n 1168 besser 700 (59.9 %) gleich 15 | zweiter_term n 1904 besser 952 (50.0 %) gleich 445
+  clu3     frisch  Kinder 6000: besser 2014 (33.6 %), gleich 2006 (33.4 %), gleichwertig 28, schlechter 1952 (32.5 %); auch Test besser 1874 von 2014; besser als BF 160 (2.7 %); Eltern schlechter als BF in 16 von 20 Sätzen
+       nach Art: parameter n 3007 besser 813 (27.0 %) gleich 1224 | vorlage n 1244 besser 521 (41.9 %) gleich 128 | zweiter_term n 1749 besser 680 (38.9 %) gleich 654
+  stark    bf      Kinder 6000: besser 135 (2.2 %), gleich 3402 (56.7 %), gleichwertig 4, schlechter 2459 (41.0 %); auch Test besser 6 von 135; besser als BF 135 (2.2 %); Eltern schlechter als BF in 0 von 20 Sätzen
+       nach Art: parameter n 2980 besser 44 (1.5 %) gleich 2039 | vorlage n 1195 besser 24 (2.0 %) gleich 51 | zweiter_term n 1825 besser 67 (3.7 %) gleich 1312
+  stark    s1_20   Kinder 6000: besser 3224 (53.7 %), gleich 406 (6.8 %), gleichwertig 3, schlechter 2367 (39.5 %); auch Test besser 3171 von 3224; besser als BF 29 (0.5 %); Eltern schlechter als BF in 20 von 20 Sätzen
+       nach Art: parameter n 3033 besser 1378 (45.4 %) gleich 274 | vorlage n 1175 besser 761 (64.8 %) gleich 4 | zweiter_term n 1792 besser 1085 (60.5 %) gleich 128
+  stark    frisch  Kinder 6000: besser 2402 (40.0 %), gleich 1189 (19.8 %), gleichwertig 10, schlechter 2399 (40.0 %); auch Test besser 2099 von 2402; besser als BF 209 (3.5 %); Eltern schlechter als BF in 19 von 20 Sätzen
+       nach Art: parameter n 2983 besser 1238 (41.5 %) gleich 735 | vorlage n 1219 besser 404 (33.1 %) gleich 32 | zweiter_term n 1798 besser 760 (42.3 %) gleich 422
+
+== T11 Spielraum (Überschuss über LB in %, 200 bzw. 100 Instanzen) ==
+  gl_20_70 same60  BF 9.82 FF 10.96 WF 18.06 NF 33.16 FFD 3.71 | FF<BF 5, FF=BF 129, FF>BF 66 von 200 | LB im Mittel 27.34
+  gl_20_70 n30     BF 11.16 FF 12.26 WF 17.74 NF 31.13 FFD 4.26 | FF<BF 4, FF=BF 160, FF>BF 36 von 200 | LB im Mittel 14.01
+  gl_20_70 n120    BF 8.22 FF 9.50 WF 18.16 NF 34.62 FFD 2.60 | FF<BF 1, FF=BF 36, FF>BF 63 von 100 | LB im Mittel 54.43
+  gl_20_70 fremd1  BF 10.11 FF 10.11 WF 14.10 NF 27.02 FFD 8.58 | FF<BF 4, FF=BF 192, FF>BF 4 von 200 | LB im Mittel 22.47
+  gl_20_70 fremd2  BF 7.02 FF 8.11 WF 15.98 NF 31.02 FFD 1.42 | FF<BF 2, FF=BF 143, FF>BF 55 von 200 | LB im Mittel 24.61
+  clu3     same60  BF 10.11 FF 10.11 WF 14.10 NF 27.02 FFD 8.58 | FF<BF 4, FF=BF 192, FF>BF 4 von 200 | LB im Mittel 22.47
+  clu3     n30     BF 11.22 FF 11.22 WF 15.08 NF 25.35 FFD 8.68 | FF<BF 1, FF=BF 198, FF>BF 1 von 200 | LB im Mittel 11.50
+  clu3     n120    BF 9.20 FF 9.29 WF 13.56 NF 27.26 FFD 8.43 | FF<BF 2, FF=BF 92, FF>BF 6 von 100 | LB im Mittel 44.05
+  clu3     fremd1  BF 9.82 FF 10.96 WF 18.06 NF 33.16 FFD 3.71 | FF<BF 5, FF=BF 129, FF>BF 66 von 200 | LB im Mittel 27.34
+  clu3     fremd2  BF 7.02 FF 8.11 WF 15.98 NF 31.02 FFD 1.42 | FF<BF 2, FF=BF 143, FF>BF 55 von 200 | LB im Mittel 24.61
+  stark    same60  BF 7.02 FF 8.11 WF 15.98 NF 31.02 FFD 1.42 | FF<BF 2, FF=BF 143, FF>BF 55 von 200 | LB im Mittel 24.61
+  stark    n30     BF 8.59 FF 9.49 WF 15.16 NF 28.45 FFD 2.53 | FF<BF 3, FF=BF 171, FF>BF 26 von 200 | LB im Mittel 12.52
+  stark    n120    BF 5.88 FF 6.86 WF 15.86 NF 31.84 FFD 0.70 | FF<BF 3, FF=BF 51, FF>BF 46 von 100 | LB im Mittel 49.14
+  stark    fremd1  BF 9.82 FF 10.96 WF 18.06 NF 33.16 FFD 3.71 | FF<BF 5, FF=BF 129, FF>BF 66 von 200 | LB im Mittel 27.34
+  stark    fremd2  BF 10.11 FF 10.11 WF 14.10 NF 27.02 FFD 8.58 | FF<BF 4, FF=BF 192, FF>BF 4 von 200 | LB im Mittel 22.47
+10 Gegenstände gegen das Optimum: {'gl_20_70': {'bf_ueber_opt': 6.172619, 'lb_unter_opt': 5.64881, 'bf_optimal': 139, 'lb_eq_opt': 135, 'n': 200, 'n_items': 10}, 'clu3': {'bf_ueber_opt': 3.791667, 'lb_unter_opt': 7.876786, 'bf_optimal': 169, 'lb_eq_opt': 126, 'n': 200, 'n_items': 10}, 'stark': {'bf_ueber_opt': 6.175, 'lb_unter_opt': 4.075, 'bf_optimal': 147, 'lb_eq_opt': 155, 'n': 200, 'n_items': 10}}
+
+== T12 Stichprobe 10 000 Auswertungen (EA-S, gl_20_70, 2 Läufe) ==
+  Lauf 0: [(1000, '-0.89', '+0.05'), (2000, '-0.89', '+0.05'), (5000, '-0.89', '+0.05'), (10000, '-0.89', '+0.05')] Pool 8014 greedy k=3 Orakel/Merkmal/fest ['-0.57', '+0.19', '+0.05'] Training -1.45
+  Lauf 1: [(1000, '-1.45', '+0.74'), (2000, '-1.45', '+0.74'), (5000, '-1.45', '+0.74'), (10000, '-1.45', '+0.92')] Pool 8773 greedy k=3 Orakel/Merkmal/fest ['-0.95', '+2.93', '+0.92'] Training -3.04
+
+GESAMT: 360 Läufe in M1, 494000 gezählte Auswertungen in allen Blöcken; Vergleiche: 7

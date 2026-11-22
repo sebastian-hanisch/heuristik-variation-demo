@@ -1,0 +1,23 @@
+  m1 gl_20_70 Z-S: 20 Läufe in 221 s
+  m1 gl_20_70 ZW-S: 20 Läufe in 230 s
+  m1 gl_20_70 EA-S: 20 Läufe in 230 s
+  m1 gl_20_70 Z-T: 20 Läufe in 255 s
+  m1 gl_20_70 GP0-T: 20 Läufe in 187 s
+  m1 gl_20_70 GP-T: 20 Läufe in 222 s
+m1:gl_20_70: fertig in 1356 s, 120000 Auswertungen gezählt
+  m4 gl_20_70 bf: 36 s
+  m4 gl_20_70 s1_20: 96 s
+  m4 gl_20_70 frisch: 62 s
+  m4 clu3 bf: 31 s
+  m4 clu3 s1_20: 63 s
+  m4 clu3 frisch: 54 s
+  m4 stark bf: 34 s
+  m4 stark s1_20: 66 s
+  m4 stark frisch: 59 s
+m4: fertig in 503 s, 54000 Auswertungen gezählt
+m6: fertig in 2 s, 0 Auswertungen gezählt
+  m3 gl_20_70 Z-S: 10 Läufe in 94 s
+  m3 gl_20_70 EA-S: 10 Läufe in 72 s
+  m3 gl_20_70 GP-T: 10 Läufe in 69 s
+m3:gl_20_70: fertig in 237 s, 30000 Auswertungen gezählt
+m7: fertig in 133 s, 20000 Auswertungen gezählt
